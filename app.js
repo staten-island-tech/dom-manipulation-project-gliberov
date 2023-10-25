@@ -20,8 +20,21 @@ DOMSelectors.name.addEventListener('submit' , function () {
 const DOMSelectors = {
     button: document.getElementById('btn'),
     input: document.querySelector("#input"),
+    text: document.querySelector("#text"),
     box: document.getElementById("container-box"),
+    points: document.querySelectorAll(".point")
 };
+DOMSelectors.button.addEventListener('submit', function(event) {
+    event.preventDefault()
+    create()
+})
+
+function create()
+
+function backgroundAndText(background, text){
+    background.style.backgroundColor = 'red';
+    text.innerHTML = "This is now a big red box";
+}
 /* const cat = "meow";
 DOMSelectors.box.insertAdjacentHTML(`beforeend",'<h1>We are an ${cat}</h1>`); */
 
