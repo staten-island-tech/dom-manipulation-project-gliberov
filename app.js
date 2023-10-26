@@ -29,19 +29,35 @@ const DOMSelectors = {
     form: document.querySelector("#form"),
     name: document.querySelector("#name"),
     map: document.querySelector("#map"),
+    cool: document.querySelector("#cool"),
     box: document.querySelector('#countries')
 };
 
-function create(){
-
-    DOMSelectors.box.insertAdjacentHTML("beforeend",`<div class="card">
-    <h2>${DOMSelectors.name.value}</h2>
-    <img src="${DOMSelectors.map.value}">
-    </div>`,);
+function create() {
+    const country = {
+    name: DOMSelectors.name.value,
+    map: DOMSelectors.map.value,
+    cool: DOMSelectors.cool.value
     }
+    inject(country)
+    clear()
+}
 
 DOMSelectors.form.addEventListener('submit', function(event) {
     event.preventDefault();
     create();
 })
+
+function inject(){
+    DOMSelectors.box.insertAdjacentHTML("beforeend",`<div class="card">
+    <h2>${DOMSelectors.name.value}</h2>
+    <img src="${DOMSelectors.map.value}">
+    <p>${DOMSelectors.cool.value}</p>`)
+}
+
+function clear(){
+    DOMSelectors.name.value = ''
+    DOMSelectors.map.value = ''
+    DOMSelectors.cool.value = ''
+}
 
