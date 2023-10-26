@@ -10,18 +10,20 @@
 <body>
     <div id="container-box"> 
         <p id="text"> Gabe's DOM Manipulation</p>
-        <input type="text" id="input" />
-        <button type="button" id="btn">Click Me!</button>
-        <button type="button" id="clear">Click Me! (clear)</button>
+
+        <form action="" id="form">
+            <label for="country-name">Enter your country's name</label>
+            <input type="text" id="name" name="country-name" />
+            <label for="country-map">Enter your country's map</label>
+            <input type="text" id="map" name="country-map" />
+            <input type="submit" id="submit" value="Click Me!"/>
+        </form>
     </div>
-    <div class="blogpost">
-        <h2>we love fortnite</h2>
-    </div>
-    <div class="blogpost2">
-        <h2>we love fortnite</h2>
-    </div>
-    <div class="blogpost3">
-        <h2>we love fortnite</h2>
+    <div id="countries">
+        <div class="card">
+            <h2>India</h2>
+            <img src="https://th.bing.com/th/id/R.2d7ec86122000c3bc8396158d0e06c35?rik=JpZ6890bAptZZw&riu=http%3a%2f%2fwww.orangesmile.com%2fcommon%2fimg_country_maps%2findia-map-0.jpg&ehk=0NuDiUp7bjwnv0pz9KwwTrUeiz1N1xRXOWMhOI0trqU%3d&risl=&pid=ImgRaw&r=0" alt="indialol">
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
