@@ -30,7 +30,7 @@ const DOMSelectors = {
     name: document.querySelector("#name"),
     map: document.querySelector("#map"),
     cool: document.querySelector("#cool"),
-    box: document.querySelector('#countries')
+    box: document.querySelector('#countries'),
 };
 
 function create() {
@@ -52,7 +52,12 @@ function inject(){
     DOMSelectors.box.insertAdjacentHTML("beforeend",`<div class="card">
     <h2>${DOMSelectors.name.value}</h2>
     <img src="${DOMSelectors.map.value}">
-    <p>${DOMSelectors.cool.value}</p>`)
+    <p>${DOMSelectors.cool.value}</p>
+    <button class="remove">Remove Button</button>
+    </div>
+    `)
+    const countryobj = DOMSelectors.box.querySelector('.card');
+    remove(countryobj)
 }
 
 function clear(){
@@ -60,4 +65,12 @@ function clear(){
     DOMSelectors.map.value = ''
     DOMSelectors.cool.value = ''
 }
+
+function remove(countryobj){
+    const button = countryobj.querySelector('.remove')
+    button.addEventListener('click', function(event) {
+        countryobj.remove()
+    });
+}
+
 
