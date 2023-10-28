@@ -49,7 +49,7 @@ DOMSelectors.form.addEventListener('submit', function(event) {
 })
 
 function inject(){
-    DOMSelectors.box.insertAdjacentHTML("beforeend",`<div class="card">
+    DOMSelectors.box.insertAdjacentHTML("afterbegin",`<div class="card">
     <h2>${DOMSelectors.name.value}</h2>
     <img src="${DOMSelectors.map.value}">
     <p>${DOMSelectors.cool.value}</p>
